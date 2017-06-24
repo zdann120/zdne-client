@@ -1,0 +1,21 @@
+- content_for(:site_page_title, 'Request Changes')
+h1 Your Change Requests
+table.table.table-sm.table-bordered.table-striped
+  thead
+    tr
+      th Details
+      th Urgent
+      th
+      th
+
+  tbody
+    - @change_requests.each do |change_request|
+      tr
+        td = change_request.details
+        td = change_request.urgent
+        td = link_to 'Show', change_request
+        td = link_to 'Edit', edit_change_request_path(change_request)
+
+br
+
+= link_to 'New Change request', new_change_request_path

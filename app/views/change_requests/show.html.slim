@@ -1,0 +1,29 @@
+h2 
+  | Change Request <small>#{@change_request.token}</small>
+
+p
+  strong User:
+  = @change_request.user.email
+.row
+  .col-md-6
+    hr
+    p
+      strong Old content:
+      = @change_request.old_content
+    hr
+  .col-md-6
+    hr
+    p
+      strong New content:
+      = @change_request.new_content
+    hr
+p
+  strong Details:
+  = @change_request.details
+p
+  strong Urgent:
+  = @change_request.urgent
+
+= link_to 'Edit', edit_change_request_path(@change_request)
+'  |
+= link_to 'Back', change_requests_path

@@ -4,6 +4,9 @@ class User < ApplicationRecord
 
   attr_encrypted :security_phrase, :key => '04e7wkTFliZVDBUYIhWfHLuAyzZFEm6N'
 
+  has_many :change_requests
+  has_many :websites
+
   def set_default_role
     self.role ||= :user
   end

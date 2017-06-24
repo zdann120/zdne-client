@@ -33,6 +33,7 @@ gem 'pundit'
 gem 'slim-rails'
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'hub', :require=>nil
   gem 'rails_layout'
   gem 'spring-commands-rspec'
@@ -48,3 +49,5 @@ group :test do
 end
 
 gem 'attr_encrypted'
+gem 'simple_form'
+gem 'flutie'
