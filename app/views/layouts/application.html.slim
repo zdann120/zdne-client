@@ -12,6 +12,9 @@ html
   body[class="#{body_class}"]
     header
       == render 'layouts/navigation'
+      br
+      .container
+        == render 'layouts/client_nav'      
     main[role="main"]
       == render 'layouts/messages'
       == yield

@@ -51,3 +51,4 @@ end
 gem 'attr_encrypted'
 gem 'simple_form'
 gem 'flutie'
+gem 'active_link_to'
