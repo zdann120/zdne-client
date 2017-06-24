@@ -2,6 +2,8 @@ class User < ApplicationRecord
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
+  attr_encrypted :security_phrase, :key => '04e7wkTFliZVDBUYIhWfHLuAyzZFEm6N'
+
   def set_default_role
     self.role ||= :user
   end
