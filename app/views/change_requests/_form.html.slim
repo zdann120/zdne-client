@@ -1,0 +1,19 @@
+= simple_form_for @change_request do |f|
+  - if @change_request.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@change_request.errors.count, "error")} prohibited this change_request from being saved:"
+      ul
+        - @change_request.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.association :website, collection: current_user.websites
+  .field
+    = f.input :old_content
+  .field
+    = f.input :new_content
+  .field
+    = f.input :details
+  .field
+    = f.input :urgent, label: 'Check the box if this is urgent'
+  .actions = f.submit

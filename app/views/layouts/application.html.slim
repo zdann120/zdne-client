@@ -3,12 +3,13 @@ html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     title
-      = content_for?(:title) ? yield(:title) : 'Zdne Client'
+      / = content_for?(:title) ? yield(:title) : 'Zdne Client'
+      = page_title
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Zdne Client'}"
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
     == javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     == csrf_meta_tags
-  body
+  body[class="#{body_class}"]
     header
       == render 'layouts/navigation'
     main[role="main"]
