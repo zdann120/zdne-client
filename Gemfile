@@ -51,4 +51,5 @@ end
 gem 'attr_encrypted'
 gem 'simple_form'
 gem 'flutie'
-gem 'active_link_to'
+gem 'active_link_to', github: 'comfy/active_link_to'
+gem 'administrate', github: 'thoughtbot/administrate'
